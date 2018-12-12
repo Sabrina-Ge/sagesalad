@@ -1,0 +1,9 @@
+Package: sagesalad
+Version: 0.0.1
+Date: 2018-12-12
+Title: Sabrina Ge Salad
+Description: A mix of misc R functions that Sabrina Ge uses
+Author: Sabrina M Ge <sabrina.ge@mail.utoronto.ca>
+Maintainer: Sabrina M Ge <sabrina.ge@mail.utoronto.ca>
+Encoding: UTF-8
+RoxygenNote: 6.1.1

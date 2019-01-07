@@ -16,6 +16,6 @@ None
 \code{\link{setwd}}s the first dir that exists in a vector of dir
 }
 \examples{
-setwd.multi("path/on/hpc", "path/on/local")
+setwd.multi(c("path/on/hpc", "path/on/local"))
 
 }

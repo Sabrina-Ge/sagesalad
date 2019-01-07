@@ -25,7 +25,7 @@ data.frame.empty <- function(nrow = 0, ncol) {
 #' @return None
 #' 
 #' @examples 
-#' source.multi("path/on/hpc", "path/on/local")
+#' source.multi(c("path/on/hpc", "path/on/local"))
 #' 
 #' @export
 source.multi <- function(multiPath) {
@@ -49,7 +49,7 @@ source.multi <- function(multiPath) {
 #' @return None
 #' 
 #' @examples 
-#' setwd.multi("path/on/hpc", "path/on/local")
+#' setwd.multi(c("path/on/hpc", "path/on/local"))
 #' 
 #' @export
 setwd.multi <- function(multiPath) {

@@ -16,6 +16,6 @@ None
 \code{\link{source}}s the first file that exists in a vector of files.
 }
 \examples{
-source.multi("path/on/hpc", "path/on/local")
+source.multi(c("path/on/hpc", "path/on/local"))
 
 }

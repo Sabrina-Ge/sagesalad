@@ -2,6 +2,7 @@
 
 export(data.frame.empty)
 export(datestamp)
+export(ensembl.to.hgnc)
 export(pdf.date)
 export(setwd.multi)
 export(source.multi)

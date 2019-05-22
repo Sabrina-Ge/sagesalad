@@ -10,12 +10,12 @@ source.multi(multiPath)
 \item{multiPath}{vector of character strings representing inputs to \code{\link{source}}}
 }
 \value{
-None
+index of the path in multiPath that was sourced
 }
 \description{
 \code{\link{source}}s the first file that exists in a vector of files.
 }
 \examples{
-source.multi(c("path/on/hpc", "path/on/local"))
+source.multi(c("/path/on/network", "/path/on/local"))
 
 }

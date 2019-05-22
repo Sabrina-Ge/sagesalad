@@ -10,12 +10,12 @@ setwd.multi(multiPath)
 \item{multiPath}{vector of characters representing inputs to \code{\link{setwd}}}
 }
 \value{
-None
+index of dir in multiPath that was set as the working directory
 }
 \description{
 \code{\link{setwd}}s the first dir that exists in a vector of dir
 }
 \examples{
-setwd.multi(c("path/on/hpc", "path/on/local"))
+setwd.multi(c("/path/on/network", "/path/on/local"))
 
 }

@@ -22,18 +22,19 @@ data.frame.empty <- function(nrow = 0, ncol) {
 #' 
 #' @param multiPath vector of character strings representing inputs to \code{\link{source}}
 #' 
-#' @return None
+#' @return index of the path in multiPath that was sourced
 #' 
 #' @examples 
-#' source.multi(c("path/on/hpc", "path/on/local"))
+#' source.multi(c("/path/on/network", "/path/on/local"))
 #' 
 #' @export
 source.multi <- function(multiPath) {
-  for (curPath in multiPath) {
+  for (i in 1:length(multiPath)) {
+    curPath <- multiPath[[i]]
     if (file.exists(curPath)) {
       source(curPath)
-      print(sprintf('executed: source("%s")', curPath), quote=FALSE)
-      return(curPath)
+      cat(sprintf('executed: source("%s")\n', curPath))
+      return(i)
     }
   }
   stop("None of the files exist")
@@ -46,18 +47,19 @@ source.multi <- function(multiPath) {
 #' 
 #' @param multiPath vector of characters representing inputs to \code{\link{setwd}}
 #' 
-#' @return None
+#' @return index of dir in multiPath that was set as the working directory
 #' 
 #' @examples 
-#' setwd.multi(c("path/on/hpc", "path/on/local"))
+#' setwd.multi(c("/path/on/network", "/path/on/local"))
 #' 
 #' @export
 setwd.multi <- function(multiPath) {
-  for (curPath in multiPath) {
+  for (i in 1:length(multiPath)) {
+    curPath <- multiPath[[i]]
     if (dir.exists(curPath)) {
       setwd(curPath)
-      print(sprintf('executed: setwd("%s")', curPath), quote=FALSE)
-      return(curPath)
+      cat(sprintf('executed: setwd("%s")\n', curPath))
+      return(i)
     }
   }
   stop("None of the directories exist")

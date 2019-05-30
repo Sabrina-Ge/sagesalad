@@ -43,7 +43,7 @@ rm(Sys.time)
 ##### Functions used in development ####
 
 time_datestamp <- function() {
-  filename <- "poatao.test.pdf"
+  filename <- "potato.test.pdf"
   dateFormat = "%Y%m%d_%H%M"
   stamp_date <- format(Sys.time(), dateFormat)
   times <- data.frame.empty(4, 5)

@@ -125,3 +125,19 @@ pdf.date <- function(file = "Rplots.pdf", dateFormat = "%Y%m%d_%H%M",
       useDingbats, useKerning, fillOddEven, compress)
 }
 
+
+#' \code{\link{png}} wrapper with datestamp
+#'
+#' A wrapper of the \code{\link{png}} function that automatically datestamps the filename,
+#' and uses a default of 10 inches by 10 inches at 300 dpi for image size
+#'
+#' @export
+png.date <- function (filename = "Rplot%03d.png", dateFormat = "%Y%m%d_%H%M", width = 10, height = 10, 
+                      units = "in", pointsize = 12, bg = "white", res = 300, 
+                      type = c("cairo", "cairo-png", "Xlib", "quartz"), antialias = "none") {
+  dated_file <- datestamp(filename)
+  png(filename = dated_file, 
+      width = width, height = height, units = units, pointsize = pointsize, 
+      bg = bg, res = res, type = type, antialias = antialias)
+}
+  
